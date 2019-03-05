@@ -23,10 +23,13 @@ header .logo, header nav {
 
 /* cta */
 
-.cta .container {
-
+.cta .container h3{
+  font-weight: 90;
+  margin:0 auto;
 }
-
+.cta .container {
+  display: flex;
+}
 
 /* footer */
 
@@ -35,15 +38,15 @@ footer {
 }
 
 .footer-left {
-
+  float:left;
 }
 
 .footer-left .footer-col {
-
+float:left;
 }
 
 .footer-right {
-
+float: right;
 }
 
 /* ======+++++======++++=====+++=== */
@@ -66,17 +69,23 @@ body {
 header {
   border-bottom: 3px solid #d0a064;
   background-color: #167C80;
+  display: flex;
 }
 
 .logo {
-  padding: 15px;
+  padding: 20px 30px 15px 30px;
   color: white;
   font-size: 2em;
   font-weight: bold;
+  flex-grow: 1;
+  /* float: center; */
+  margin:0 auto;
 }
 
 nav ul li {
-  padding: 15px;
+  /* padding: 15px; */
+  padding: 2px 30px 15px 30px;
+  float: left;
 }
 
 .navigation a {
@@ -88,7 +97,9 @@ nav ul li {
   letter-spacing: 1px;
   font-size: 0.8em;
 }
-
+.navigation li{
+  list-style: none;
+}
 .navigation li:hover a {
   color: #d0a064;
   transition: all 0.2s;
@@ -130,7 +141,21 @@ nav ul li {
   text-decoration:none;
   transition: all 0.2s;
 }
-
+.aboutbtn{
+  width: 95px;
+  height: 25px;
+  text-align: center;
+  line-height: 1.4em;
+  margin: 0 auto;
+  /* padding: 0.8em 0;  */
+}
+.contactbtn {
+width: 95px;
+height: 25px;
+text-align: right;
+line-height: 1.4em;
+margin: 0 auto;
+}
 .aboutbtn:hover, .contactbtn:hover {
   background-color: #167C80;
   color: white;
@@ -146,6 +171,7 @@ nav ul li {
   line-height: 1.4em;
   padding: 1em;
   font-style: italic;
+  font-weight: 150;
 }
 
 .top p {
@@ -156,22 +182,39 @@ nav ul li {
 .aboutrow {
   background-color: #d0a064;
   padding: 15px;
+  float: left;
+  width: 33.3%;
+  display: flex;
+  justify-content: center;
+  width: 750px;
+  height: 300px;
+  
 }
 
 .aboutcol {
-  border: 1px solid #fff;
-  padding: 15px;
-  margin: 5px;
+  border: 2px solid #d0a064;
+  padding: 0px 0px 0px 5px;
+  margin: 0px auto;
   background-color: #ffe5c5;
+  justify-content: center;
+width: 750px;
+height: 300px;
+float:left;
 }
+.aboutcol p{
+  padding: 0px 0px 0px 5px;
+  margin: 1 auto;
 
+}
 .aboutcol h4 {
   font-size: 1.3em;
   text-align: center;
   text-transform: uppercase;
   letter-spacing: 1px;
   color: #167C80;
-  padding: 0.8em 0;
+  /* padding: 0.8em 0; */
+  padding: 0px 0px 0px 5px;
+  margin: 1 auto;
 }
 
 .feature {
@@ -182,15 +225,26 @@ nav ul li {
   background-image: url('../assets/glacier.jpg');
   background-size:cover;
   background-position:center center;
+  width:650px;
+  height: 700px;
+  
 }
 
 .feat-right {
-  padding: 50px;
+  padding: 15px;
+  align-items: right;
+  display: flex;
+  flex-flow: column wrap;
+  align-self: flex-end;
 }
 
 .feat-right p {
   color: white;
   margin: 1em 0;
+  /* float: right; */
+  align-items: flex-end;
+  display: flex;
+  flex-flow: column wrap;
 }
 
 .feat-intro {
@@ -225,7 +279,6 @@ footer {
 footer a {
   color: #d0a064;
   text-decoration: none;
-
 }
 
 input {
@@ -254,6 +307,9 @@ footer h5 {
 .cta .container h3 {
   font-size: 1.5em;
 }
+.footernav{
+  list-style: none;
+}
 
 @media screen and (min-width: 1025px) {
   body {
@@ -264,5 +320,4 @@ footer h5 {
     text-align: left;
     padding: 50px 15px 50px 200px;
   }
-
 }
